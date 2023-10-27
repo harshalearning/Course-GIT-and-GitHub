@@ -1,4 +1,21 @@
-GIT COMMANDS:
+git COMMANDS:
 
-Where/when: Gives you the path.
-git --version: Gives the version of GIT..
+Where/when --> Gives you the path.
+git --version --> Gives the version of git..
+git init --> create a new folder to keep track of everthing for this directory.
+pwd --> present working directory.
+ls --> List all the hidden files and directories.
+ls -a --> list all files including hidden files.
+cd - change directory
+cd .. --> Goes to home directory
+git help --> help you to explore more.
+git add <filename> --> Adds particular file for Staging area.
+git add . --> Adds all the modified/created files to the staging area. staging area keeps note od changes.
+git commit -m "mandatory message" --> Code gets commited to the repository.
+git log --> Get more info of the changes done. how many commits done, when and where these changes are done.
+git log -n --> No of commits (n is just number)
+git log --author="harsha" --> Gives the list of commits by name harsha.
+git log --since=2023-10-26 --> Gives the list of commits done from given date.
+git log --until=2023-10-26 --> Gves the list of commits done till given date.
+git status --> Give the current status of the files.
+cat <file> --> reads the given file.
