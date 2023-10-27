@@ -1,0 +1,4 @@
+Terminal/Command prompt
+Power shell
+VS code
+Sublime Code
