@@ -1,0 +1,4 @@
+GIT COMMANDS:
+
+Where/when: Gives you the path.
+git --version: Gives the version of GIT..
