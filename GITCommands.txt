@@ -62,3 +62,13 @@ git branch -D <filename>  --> Deletes the file from mentioned branch if the data
 git merge <branch> --> Merges with the given branch to the branch you are in.
 git merge --no-ff <branch> --> Merges the given branch to the existing branch with new SHA, so we can have log of it.
 git merge --ff-only <branch> --> Merges the given branch into the existing branch, if only FF is possible. If FF is not possible abort the merge.
+git merge --abort --> clears everything and comes to data before commits.
+git log --graph --online --all --decorate --> It gives a graphical representation of the commits in oneliner along with the main branch and branchesa and their merges.
+git stash save "message" --> Saves data into stash.
+git stash list --> Displays the stash@{0} (particular stash, as we can have multiple saves), <branchname>, message given along with the save.
+git stash show -p stash@{0} --> It is similar to diff command, shows the lines added in the file compared to previous.
+git stash pop stash@{0} --> It is cutiing first stash saved and adding to the branch. Stash doesnot exist, it clears the stash.
+git stash apply stash@{0} --> It just copies the first stash and adds to the branch. Stash exists.
+git stash pop --> It cuts the last saved stag and gets added to the branch.
+git stash drop stash@{0} --> Drops the particular stash.
+git stash clear --> drops/deletes everything from stash.

@@ -119,11 +119,11 @@ GIT Branching:
     We could create a branch from existing branch also rather than creating a branch from main/master.
 
     SCENARIO:
-    You have made some changes to the file and you have not commited those changes yet in that particular branch. Is it possible to switch thr branch?
+    You have made some changes to the file and you have not commited those changes yet in that particular branch. Is it possible to switch the branch?
     Yes, we can switch the branch. This could be done in 3 ways
-    1) Directly switch using checkout/switch command.
+    1) Directly switch using checkout/switch command. The changes are gone.
     2) Add the branch code to staging area and commit it. Then move to other branch.
-    3) Stash - Its kind of place to put your things for a mean while, then bring them back again.
+    3) Stash - Its kind of place to put your things for a mean while, then bring them back again. We will talk about this after merging concept.
 
     NOTE: Checkout has 2 functionalities
     1) switching branches
@@ -146,7 +146,24 @@ Fast Forward Branching:
     2) merge --no-ff  --> don't do FF merge
     3) merge --ff-only --> proceed with FF merge only, if it is not possible abort the merge.
     
-  
+Conflicts and Merging in GIT:
+    Conflict would majorly occur when we create a branch from main, work on it with some changes, commit it. Now move to master, make some changes on master and commit the file in master. Then git status would be clean, but there is conflict as both the files got changed and commited.
+    As it doesn't know priority, there are 3 ways to handle these:
+    1) abort everything - and commit file and merge.
+    2) Make all the changes manually - and commit them again
+    3) Tools - tortoisemerge, emerge, vimdiff.
 
+STASHING:
+    Branch Stashing: It is kind of trash/recycle folder which can store files for sometime and get the data back.
 
-
+    How to get data back from stash - git stash list (as we have multiple saves, from different branches)
+    Stashing multiple branches: 
+    We will have mutliple branches and so could create multiple files in form of list into stash.
+    1) We first save the stash for all the required branches.
+    2) Get the stored stash in the form of list using command.
+    3) Finally merge the stash into required branch, for the same we have 2 types 
+        a) Apply - This copies the mentioned stash and merge it to the required branch. In this case stash exists and is not deleted.
+        b) POP - This cuts the mentioned stash and merges it into required branch, In this case the added stash is removed from the stash.
+    4) Finally clean up your stash if it is not required anymore. There are 2 ways
+        a) Delete everything: We use clear command - git stash clear
+        b) Delete the mentioned: We use drop command - git stash drop stash@{0}
