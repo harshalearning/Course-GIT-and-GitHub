@@ -15,8 +15,10 @@ git commit -m "mandatory message" --> Code gets commited to the repository.
 git log --> Get more info of the changes done. how many commits done, when and where these changes are done.
 git log -n --> No of commits (n is just number)
 git log --author="harsha" --> Gives the list of commits by name harsha.
-git log --since=2023-10-26 --> Gives the list of commits done from given date.
-git log --until=2023-10-26 --> Gves the list of commits done till given date.
+git log --since="2023-10-26" --> Gives the list of commits done from given date.
+git log --until="2023-10-26" --> Gves the list of commits done till given date.
+git log --since="2023-10-26" --until="2023-10-27" --> Gives the logs of mentioned dates.
+git log --since="1 week ago" --> gives all the logs of last 1 week.
 git status --> Give the current status of the files.
 cat <file> --> reads the given file.
 git rm --cached <filename> --> removing file from staging area/unstaging.
@@ -26,3 +28,34 @@ git rm <filename> --> removed the named file.
 git checkout -- <filename> --> It checks the given file name in repo and replaces the existing file in local machine with the repo file.
 git reset HEAD <filename> --> Bring the file back to local machine/working directory from staging area.
 git commit --amend -m "message"  --> Works only for the last file to overwrite the last log with a new SAH, the advantage is we won't have the old message in the log, it will be replaced by new message and SAH.
+git checkout <SAH> -- <filename> --> Works for moving commited file to staging area.
+git reset --soft <SAH>  --> Moves file to mentioned version/SAH
+git reset --mixed <SAH> / git reset <SAH> --> Makes same copy of repo of stating, as in mentioned SAH
+git reset --hard <SAH> --> Make a copy of repo in local as in mentioned SAH.
+git reset HEAD~1 --> The HEAD moves one commit behind.
+git reset HEAD~n --> The HEAD moves n commits behind.
+git clean -n : What we are about to clean. which are not part of staging area.
+git clean -f : Not worrying about them, clean them. which are not part of staging area.
+git ls-tree HEAD--> refer to any directory using this, it lists entire structure.
+git ls-tree <Full/Partial SHA> --> It gives the directory structure at that point of time.
+git ls-tree HEAD~2 --> refer to any directory using this, it lists entire structure of the version before 2 commits.
+git log --oneline --> Gives all the logs in oneliner, in structured way.
+git log --oneline -n --> Gives all the logs in oneliner for n lines.
+git log --grep="reset" --> It looks for the message where log has value reset and displays all the logs.
+git log <SHA old>..<SHA recent> --> Gives the logs of commits between the given SHA numbers.
+git log --format="short" --> Gives the short description of Commit log.
+git log --format="fuller" --> Gives the detailed and structured way of commited logs.
+git log --oneline --> Gives the one liner logs.
+git log --pretty --> This also provides you logs, kind of similar way to --format="short".
+git branch  --> Gives the current branch you are working on. It is denoted next to *.
+git branch <branchname> --> creates the branch 
+git checkout <branchname> --> You get switched to particular branch mentioned in the command.
+git switch <branchname> --> You get switched to particular branch mentioned in the command.
+git checkout -b <branchname> --> It creates a branch and switches you to that created branch. This is popularly used one.
+git switch -c <branchname> --> It also creates a branch and switches you to the newly created branch.
+git log --graph --oneline --decorate -all --> It gives the oneliner commits for all the branches exists.
+git diff <filename>..<filename1> --> Gives the differences between the 2 files.
+git branch --merged --> 
+git branch -m <fileoldname> <filenewname> --> Changes the file name to <filenewname>.
+git branch -d <filename> / git branch --delete <filename> --> Deletes the file from mentioned branch.
+git branch -D <filename>  --> Deletes the file from mentioned branch if the data in branch is not same as master/main.
