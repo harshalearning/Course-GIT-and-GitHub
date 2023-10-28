@@ -138,6 +138,14 @@ GIT Branching:
 
 Branch Merging: 
     Whenever you want to merge the branch with someother branch/main. First you have to be on that branch and then use command git merge <branchname>. No need to mention the name where you want to merge as you are already on that branch and your HEAD points that branch.
+
+Fast Forward Branching:
+    This is basically which uses the same SHA (which it already has when HEAD is pointing before switching the branch to main/master) to merge with master/main, in case any commit is not done for master/main after creating branch, working on it and merging it. There are three types of merge. The Same SHA for the branch existed will be moved to the newly merged branch into main. Baically, it is moving the existing commit into main branch.
+    Basically won't keep the log of it, if we need the log we need to mention no ff during merge.
+    1) FF merge
+    2) merge --no-ff  --> don't do FF merge
+    3) merge --ff-only --> proceed with FF merge only, if it is not possible abort the merge.
+    
   
 
 

@@ -59,3 +59,6 @@ git branch --merged -->
 git branch -m <fileoldname> <filenewname> --> Changes the file name to <filenewname>.
 git branch -d <filename> / git branch --delete <filename> --> Deletes the file from mentioned branch.
 git branch -D <filename>  --> Deletes the file from mentioned branch if the data in branch is not same as master/main.
+git merge <branch> --> Merges with the given branch to the branch you are in.
+git merge --no-ff <branch> --> Merges the given branch to the existing branch with new SHA, so we can have log of it.
+git merge --ff-only <branch> --> Merges the given branch into the existing branch, if only FF is possible. If FF is not possible abort the merge.
