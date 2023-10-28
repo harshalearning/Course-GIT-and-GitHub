@@ -167,3 +167,45 @@ STASHING:
     4) Finally clean up your stash if it is not required anymore. There are 2 ways
         a) Delete everything: We use clear command - git stash clear
         b) Delete the mentioned: We use drop command - git stash drop stash@{0}
+
+**Till now we have discussed everything in context of local repository, now we will see git hostings on remote**
+
+    We can host them on different tools called Version Control tools such as Github, GitLab, Bitbucket.
+    1) GIT local - our computer
+    2) GIT remote - where we copy our things on some place. 
+
+    We use 2 commands basically
+    1) Push --> It pushes all your code from mentioned branch to remote.
+    2) Fetch + merge --> It pulls the master from remote to master origin. Merging our master origin into local repository.
+    3) pull --> Mix of fetch + merge 
+
+    You could clone/download the whole repository existing in GIT hub and work on it. He can have it on his local machine.
+
+
+WORKING ON OPEN SOURCE PROJECTS:
+    We need someone to collabrate on our account, so we need to find ways to resolve this rather than providing our key/credentials at the time of push. So for resolving this we could integrate the collabrator so he could collabrate with us.
+
+    How to change that ? 
+    Settings--> Collabrators --> add his email id as collabrator --> so it send email to specific user to allow him to collabrate.
+
+How to collabrate on open source as we have limited permession for write, even on open source. To collabrate on that kind of projects
+1) Forking the project - It creates a seperate branch on your name and work on it and update that branch. Then you can send the pull request.
+2) Sending Pull request - So the owners has option to look into your pull request and accept your work and merge entire branch into project.
+
+
+TICKETS AND TAGS:
+    Tag: Tag is kind of alias for SHA. We use taging (or) ticket to make understand everyone, what exactly happened in that particular commit. 
+
+    Adding a tag to the commit - it can be done by adding SHA number next to tag. 
+    ******************************         git tag <ticketno> <SHA>          ********************************************
+
+    The best practice would be adding tag with a message:
+    ******************************         git tag -a <ticket/version> -m "message"  <SHA>     *********************************
+
+
+    Pushing tags to GIT HUB:
+    We can switch to branch/tag from master. We can see everything in commits.
+    You need to remember you have to push the tags to remote. It should be mentioned explicitly that we ra epushing it.
+    We can push in 2 ways
+    1) Individually 
+    2) All at a time 

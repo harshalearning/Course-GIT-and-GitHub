@@ -34,8 +34,8 @@ git reset --mixed <SAH> / git reset <SAH> --> Makes same copy of repo of stating
 git reset --hard <SAH> --> Make a copy of repo in local as in mentioned SAH.
 git reset HEAD~1 --> The HEAD moves one commit behind.
 git reset HEAD~n --> The HEAD moves n commits behind.
-git clean -n : What we are about to clean. which are not part of staging area.
-git clean -f : Not worrying about them, clean them. which are not part of staging area.
+git clean -n --> What we are about to clean. which are not part of staging area.
+git clean -f --> Not worrying about them, clean them. which are not part of staging area.
 git ls-tree HEAD--> refer to any directory using this, it lists entire structure.
 git ls-tree <Full/Partial SHA> --> It gives the directory structure at that point of time.
 git ls-tree HEAD~2 --> refer to any directory using this, it lists entire structure of the version before 2 commits.
@@ -57,7 +57,7 @@ git log --graph --oneline --decorate -all --> It gives the oneliner commits for 
 git diff <filename>..<filename1> --> Gives the differences between the 2 files.
 git branch --merged --> 
 git branch -m <fileoldname> <filenewname> --> Changes the file name to <filenewname>.
-git branch -d <filename> / git branch --delete <filename> --> Deletes the file from mentioned branch.
+git branch -d <filename> (or) git branch --delete <filename> --> Deletes the file from mentioned branch.
 git branch -D <filename>  --> Deletes the file from mentioned branch if the data in branch is not same as master/main.
 git merge <branch> --> Merges with the given branch to the branch you are in.
 git merge --no-ff <branch> --> Merges the given branch to the existing branch with new SHA, so we can have log of it.
@@ -72,3 +72,20 @@ git stash apply stash@{0} --> It just copies the first stash and adds to the bra
 git stash pop --> It cuts the last saved stag and gets added to the branch.
 git stash drop stash@{0} --> Drops the particular stash.
 git stash clear --> drops/deletes everything from stash.
+git remote add origin --> It is Alias(origin), what to use.
+git remote -v --> It shows the default name to use for remote alias(origin).
+git remote add origin https://....  --> creates a remote repository, in connecting our local machine with remote. with the help of http.
+git remote add origin ssh..   --> reates a remote repository, in connecting our local machine with remote. With the help of ssh.
+git push -u origin main --> Push your code to remote, we also need to mention which branch need to be pushed.
+git push origin main --> Push your code to remote, we also need to mention which branch need to be pushed. It doenot keep track.
+git fetch --> It pulls the master from remote to master origin.
+git merge origin/master --> merging our master origin into local repository.
+git pull origin main --> It pulls the master from remote to local. It is bsically mix of fetch and merge.
+git clone http (or) ssh <nameofrepoyouneedtoplace> --> It clones the whole repo to your local machine with the given name.
+git tag <ticketno> <SHA>  --> assiging a tag to particular SHA number.
+git tag -a <ticket/version> -m "message" <SHA> --> assigning a tag (better way).
+git tag --list --> allows you to show the ticket.
+git tag -l -n --> Gives you the list of ticket number and message associated to particular ticket.
+git tag -d <tag> --> deletes the tag.
+git push origin <tag> --> Pushes that particular tag online.
+git push origin --tags --> pushes all the tags to online.

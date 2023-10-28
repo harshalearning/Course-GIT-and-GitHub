@@ -1,7 +1,12 @@
 Terminal/Command prompt
 Power shell
 VS code
-Sublime text
+Sublime text.
 tortoisemerge
 emerge
-vimdiff
+vimdiff.
+Github
+GitLab - bought by Microsoft
+Bitbucket
+Perforce -tool to look into.
+planio - german company.
