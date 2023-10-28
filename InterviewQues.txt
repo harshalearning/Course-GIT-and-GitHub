@@ -1,0 +1,37 @@
+What is Git?
+
+What is GitHub?
+
+How do you initialize a Git repository in a project?
+
+What is a commit in Git?
+
+How do you commit changes to a Git repository?
+
+What is a Git branch?
+
+How do you create a new branch in Git?
+
+How do you merge a branch into the main/master branch?
+
+What is a Git repository clone?
+
+How do you push changes to a remote repository on GitHub?
+
+What is a pull request in GitHub?
+
+What is a Git merge conflict?
+
+How can you resolve a Git merge conflict?
+
+What is a Gitignore file used for?
+
+How do you revert to a previous commit in Git?
+
+What is Git branching strategy, and why is it important?
+
+How do you create a release in Git/GitHub?
+
+What is a Git stash, and how is it used?
+
+How can you remove a file from a Git repository's history?
