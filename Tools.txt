@@ -2,3 +2,6 @@ Terminal/Command prompt
 Power shell
 VS code
 Sublime text
+tortoisemerge
+emerge
+vimdiff
